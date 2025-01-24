@@ -1,0 +1,89 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #35495e;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Main content area */
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+/* Article styling */
+article {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article p {
+    text-align: justify; /* Meratakan teks paragraf */
+    line-height: 1.6; /* Memberikan jarak antar baris pada paragraf */
+    margin-bottom: 20px; /* Jarak antar paragraf */
+}
+
+/* Section within article */
+section {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #35495e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsif untuk perangkat lebih kecil */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em; /* Mengurangi ukuran judul untuk perangkat lebih kecil */
+    }
+
+    article {
+        padding: 15px;
+    }
+
+    footer {
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em; /* Ukuran lebih kecil pada perangkat sangat kecil */
+    }
+
+    article {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    footer {
+        padding: 5px 0;
+    }
+}

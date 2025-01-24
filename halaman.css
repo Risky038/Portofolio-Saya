@@ -1,0 +1,124 @@
+/* Body dengan gambar latar belakang */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('assets/bgc.png'); /* Ganti dengan path gambar Anda */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    color: white; /* Menambahkan warna putih untuk teks pada body */
+}
+
+/* Judul utama */
+h1 {
+    font-size: 3.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+    color: white; /* Warna putih pada teks judul */
+}
+
+/* Gambar di bawah judul */
+.gambar-bawah {
+    width: 90%; /* Ukuran gambar disesuaikan dengan lebar kontainer */
+    max-width: 200px; /* Lebar maksimal gambar agar tidak terlalu besar */
+    height: auto; /* Menjaga rasio gambar */
+    margin-bottom: 30px; /* Memberi jarak antara gambar dan teks berikutnya */
+    border-radius: 10px; /* Memberikan sudut gambar yang lebih lembut */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Menambah bayangan lembut pada gambar */
+    animation: fadeIn 3s ease-out, zoomIn 1s ease-out forwards; /* Animasi gambar masuk dan zoom */
+}
+
+/* Animasi zoomIn untuk gambar */
+@keyframes zoomIn {
+    0% { 
+        transform: scale(0.8); 
+        opacity: 0;
+    }
+    100% { 
+        transform: scale(1); 
+        opacity: 1; 
+    }
+}
+
+/* Paragraf dengan animasi masuk */
+p {
+    font-size: 1.4em;
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 3s ease-out;
+    color: white; /* Warna putih pada teks paragraf */
+}
+
+/* Tombol dengan desain menarik */
+.button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.3em;
+    color: white; /* Warna putih pada teks tombol */
+    background-color: #d4ac0d;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+/* Efek hover tombol */
+.button:hover {
+    background-color: #d4ac0d;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Animasi fadeIn */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsif pada perangkat kecil */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .button {
+        padding: 15px 30px;
+        font-size: 1.1em;
+    }
+
+    .gambar-bawah {
+        width: 85%; /* Ukuran gambar lebih kecil pada layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .gambar-bawah {
+        width: 100%; /* Gambar memenuhi lebar layar pada perangkat kecil */
+        max-width: 100%; /* Pastikan gambar tidak melampaui lebar layar */
+    }
+}

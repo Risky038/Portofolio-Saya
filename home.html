@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"> <!-- Update versi Font Awesome -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Header Section with Navbar */
+        header {
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        }
+
+        .logo h1 {
+            font-size: 30px;
+            color: white;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: #f4f4f4;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-section img {
+            width: 100%;
+            height: 500px; /* Adjusted size for better view */
+            object-fit: cover;
+            opacity: 0.7; /* Translucent image effect */
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content h1 {
+            font-size: 4em;
+            margin: 0;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+        }
+
+        .button {
+            background-color: #333;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            background-color: #333;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+        }
+
+        .gallery-item {
+            flex: 0 0 auto;
+            max-width: 300px;
+            height: auto;
+            background-color: #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icon {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icon i {
+            font-size: 24px;
+        }
+
+        .social-icon:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body id="top">
+
+    <!-- Header with Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><span class="logo-part1">Portofolio</span> <span class="logo-part2">Saya</span></h1>
+            </div>
+            <ul>
+                <!-- Added "Beranda" link here -->
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="#tentang-saya">Tentang Saya</a></li>
+                <li><a href="#portfolio">Portofolio</a></li>
+                <li><a href="#blog">Blog Pribadi</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-section">
+            <div class="hero-content">
+                <h2>Muh Risky Ramadhan</h2>
+                <p><i class="fa fa-pencil-alt"></i> Mobile App Designer | Visual Designer</p>
+                <a href="#portfolio" class="button">Cek Portofolio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tentang Saya Section -->
+    <section id="tentang-saya">
+        <h1>Tentang Saya</h1>
+        <div class="about-content">
+            <img src="assets/fotoku.jpg" alt="Profile Image" class="about-image">
+            <p>"Saya adalah mahasiswa Teknik Informatika yang fokus pada pengembangan software dan desain UI/UX. Sebagai seorang Visual Designer dan Mobile App Designer, saya punya kemampuan untuk menggabungkan coding dan desain menjadi produk yang mudah digunakan dan menarik. Saya siap membantu Anda menciptakan solusi digital yang praktis, nyaman, dan sesuai dengan kebutuhan pengguna."</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>Portofolio</h2>
+        <p>Prototype Aplikasi Rental Outdoor</p>
+        <div class="gallery">
+            <div class="gallery-item"><img src="assets/depan.png" alt="Image 1"></div>
+            <div class="gallery-item"><img src="assets/slide1.png" alt="Image 2"></div>
+            <div class="gallery-item"><img src="assets/slide2.png" alt="Image 3"></div>
+            <div class="gallery-item"><img src="assets/login.png" alt="Image 4"></div>
+            <div class="gallery-item"><img src="assets/Login Email.png" alt="Image 5"></div>
+            <div class="gallery-item"><img src="assets/Buat akun.png" alt="Image 6"></div>
+            <div class="gallery-item"><img src="assets/dalam.png" alt="Image 7"></div>
+            <div class="gallery-item"><img src="assets/Menu Brand lokal.png" alt="Image 8"></div>
+            <div class="gallery-item"><img src="assets/Menu Brand luar.png" alt="Image 9"></div>
+            <div class="gallery-item"><img src="assets/menu kategori.png" alt="Image 10"></div>
+            <div class="gallery-item"><img src="assets/menu kategori,lainnya.png" alt="Image 11"></div>
+            <div class="gallery-item"><img src="assets/Keranjang.png" alt="Image 12"></div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <h1>Blog Pribadi</h1>
+        <iframe src="blog.html" style="width: 100%; height: 500px; border: none;"></iframe>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak">
+        <h1>Hubungi Saya</h1>
+        <p class="contact-note">Jika Anda tertarik dengan desain saya atau ingin bekerja sama, silakan hubungi saya melalui kontak yang tersedia di bawah ini. Saya siap membantu mewujudkan ide-ide Anda menjadi kenyataan.</p>
+        <form>
+            <input type="text" placeholder="Nama" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Pesan" required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/close_fyi?igsh=YmdtZG52amFrd24w" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="http://wa.me/+6283153113383" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://www.facebook.com/share/15rM9w1P3D/?mibextid=qi2Omg" target="_blank" class="social-icon"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 by Muh. Risky Ramadhan.</p>
+    </footer>
+
+</body>
+</html>
